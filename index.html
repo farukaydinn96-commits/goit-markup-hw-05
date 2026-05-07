@@ -51,9 +51,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-btn" data-modal-open>
-            Order Service
-          </button>
+          <a href="#modal-opened" class="hero-btn">Order Service</a>
         </div>
       </section>
 
@@ -73,7 +71,6 @@
                 most optimal solution.
               </p>
             </li>
-
             <li class="features-item">
               <div class="features-icon-box">
                 <svg width="64" height="64">
@@ -86,7 +83,6 @@
                 possible time.
               </p>
             </li>
-
             <li class="features-item">
               <div class="features-icon-box">
                 <svg width="64" height="64">
@@ -99,7 +95,6 @@
                 strategy and maximize profits.
               </p>
             </li>
-
             <li class="features-item">
               <div class="features-icon-box">
                 <svg width="64" height="64">
@@ -134,48 +129,6 @@
                   <li class="social-item">
                     <a href="" class="social-link"
                       ><svg width="16" height="16" class="social-icon">
-                        <use href="images/icons.svg#icon-instagram2"></use>
-                      </svg>
-                      ></a
-                    >
-                  </li>
-                  <li class="social-item">
-                    <a href="" class="social-link"
-                      ><svg width="16" height="16" class="social-icon">
-                        <use href="images/icons.svg#icon-twitter"></use></svg
-                    ></a>
-                  </li>
-                  <li class="social-item">
-                    <a href="" class="social-link"
-                      ><svg width="16" height="16" class="social-icon">
-                        <use href="images/icons.svg#icon-facebook"></use></svg
-                    ></a>
-                  </li>
-                  <li class="social-item">
-                    <a href="" class="social-link"
-                      ><svg width="16" height="16" class="social-icon">
-                        <use href="images/icons.svg#icon-linkedin1"></use></svg
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="team-item">
-              <img
-                src="./images/tom-ford.jpg"
-                alt="Tom Ford"
-                width="264"
-                height="260"
-              />
-              <div class="team-content">
-                <h3 class="team-subtitle">Tom Ford</h3>
-                <p class="team-text">Frontend Developer</p>
-                <ul class="social-list list">
-                  <li class="social-item">
-                    <a href="" class="social-link"
-                      ><svg width="16" height="16" class="social-icon">
-                        <
                         <use href="images/icons.svg#icon-instagram2"></use></svg
                     ></a>
                   </li>
@@ -200,7 +153,44 @@
                 </ul>
               </div>
             </li>
-
+            <li class="team-item">
+              <img
+                src="./images/tom-ford.jpg"
+                alt="Tom Ford"
+                width="264"
+                height="260"
+              />
+              <div class="team-content">
+                <h3 class="team-subtitle">Tom Ford</h3>
+                <p class="team-text">Frontend Developer</p>
+                <ul class="social-list list">
+                  <li class="social-item">
+                    <a href="" class="social-link"
+                      ><svg width="16" height="16" class="social-icon">
+                        <use href="images/icons.svg#icon-instagram2"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-item">
+                    <a href="" class="social-link"
+                      ><svg width="16" height="16" class="social-icon">
+                        <use href="images/icons.svg#icon-twitter"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-item">
+                    <a href="" class="social-link"
+                      ><svg width="16" height="16" class="social-icon">
+                        <use href="images/icons.svg#icon-facebook"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-item">
+                    <a href="" class="social-link"
+                      ><svg width="16" height="16" class="social-icon">
+                        <use href="images/icons.svg#icon-linkedin1"></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="team-item">
               <img
                 src="./images/camila-garcia.jpg"
@@ -239,7 +229,6 @@
                 </ul>
               </div>
             </li>
-
             <li class="team-item">
               <img
                 src="./images/daniel-wilson.jpg"
@@ -462,13 +451,13 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" id="modal-opened" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-btn" data-modal-close>
+        <a href="#" class="modal-close-btn">
           <svg width="8" height="8" class="modal-close-icon">
             <use href="images/icons.svg#icon-Vector-7"></use>
           </svg>
-        </button>
+        </a>
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="modal-form">
           <div class="modal-field">
@@ -548,20 +537,5 @@
         </form>
       </div>
     </div>
-
-    <script>
-      (() => {
-        const refs = {
-          openModalBtn: document.querySelector("[data-modal-open]"),
-          closeModalBtn: document.querySelector("[data-modal-close]"),
-          modal: document.querySelector("[data-modal]"),
-        };
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-        function toggleModal() {
-          refs.modal.classList.toggle("is-hidden");
-        }
-      })();
-    </script>
   </body>
 </html>
